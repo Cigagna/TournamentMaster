@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity implements InitialFragment.O
     private PartecipantsFragment partecipantsFragment;
     private SchemeFragment schemeFragment;
     private AlertDialog dialog;
+    private int statementId;
 
 
     @Override
@@ -56,7 +57,7 @@ public class MainActivity extends AppCompatActivity implements InitialFragment.O
         initialFragment = new InitialFragment();
         fragmentTransaction.add(R.id.fragment_container, initialFragment);
         fragmentTransaction.addToBackStack(null);
-        fragmentTransaction.commit();
+        statementId=fragmentTransaction.commit();
 
 
     }
@@ -97,15 +98,15 @@ public class MainActivity extends AppCompatActivity implements InitialFragment.O
 
     public void callInitialFragment() {
 
+        fragmentManager.popBackStack(statementId,0);
         fragmentTransaction = fragmentManager.beginTransaction();
 
         initialFragment = new InitialFragment();
-
         fragmentTransaction.replace(R.id.fragment_container, initialFragment);
         fragmentTransaction.addToBackStack(null);
 
 
-        fragmentTransaction.commit();
+        statementId=fragmentTransaction.commit();
     }
 
     @Override
