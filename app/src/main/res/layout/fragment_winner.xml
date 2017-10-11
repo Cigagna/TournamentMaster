@@ -1,0 +1,57 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.alessioc.tournament.WinnerFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:textSize="22dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="88dp"
+            android:text="The winner of the tournament is:"
+            android:layout_above="@+id/winner_textView"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:id="@+id/winner_textView"
+            android:textSize="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:textSize="23dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/winner_textView"
+            android:text="Congratulations!"
+            android:layout_marginTop="85dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="53dp" />
+
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/new_tournament_floatingActionButton"
+            app:backgroundTint="@color/colorDarkOrange"
+            app:fabSize="normal"
+            app:srcCompat="@android:drawable/ic_menu_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView5"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="-20dp"
+            android:clickable="true" />
+    </RelativeLayout>
+</FrameLayout>

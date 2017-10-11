@@ -1,0 +1,61 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.alessioc.tournament.SchemeFragment">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+        <!-- TODO: Update blank fragment layout -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tournament scheme"
+            android:layout_centerHorizontal="true"
+            android:textSize="16dp"/>
+
+        <ScrollView
+            android:id="@+id/scroll_wiew_scheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="100dp"
+            android:layout_marginTop="30dp"
+            android:layout_weight="1"
+            android:scrollbars="none">
+
+            <TableLayout
+                android:id="@+id/scheme_table"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                >
+
+
+            </TableLayout>
+        </ScrollView>
+
+        <!--<Button
+            android:id="@+id/next_turn_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/scroll_wiew_scheme"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="450dp"
+            android:text="Next Turn >>" />-->
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/next_turn_floatingActionButton"
+            app:backgroundTint="@color/colorDarkOrange"
+            app:fabSize="normal"
+            app:srcCompat="@android:drawable/ic_media_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/scroll_wiew_scheme"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="-85dp"
+            android:clickable="true" />
+    </RelativeLayout>
+</FrameLayout>
