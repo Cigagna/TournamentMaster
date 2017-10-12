@@ -7,7 +7,8 @@
 
     <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
         android:layout_gravity="center">
         <!-- TODO: Update blank fragment layout -->
         <TextView
@@ -37,14 +38,6 @@
             </TableLayout>
         </ScrollView>
 
-        <!--<Button
-            android:id="@+id/next_turn_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/scroll_wiew_scheme"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="450dp"
-            android:text="Next Turn >>" />-->
 
         <android.support.design.widget.FloatingActionButton
             android:id="@+id/next_turn_floatingActionButton"

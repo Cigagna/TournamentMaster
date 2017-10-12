@@ -26,15 +26,6 @@ import android.widget.Toast;
  * create an instance of this fragment.
  */
 public class InitialFragment extends Fragment implements View.OnClickListener {
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
 
     private OnFragmentInteractionListener mListener;
     private EditText numPartText;
@@ -67,12 +58,6 @@ public class InitialFragment extends Fragment implements View.OnClickListener {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-
-
 
     }
 
@@ -104,22 +89,6 @@ public class InitialFragment extends Fragment implements View.OnClickListener {
         for (int i=0;i<10;i++) {
             nPartValues[i] = ""+(n);
             n=n*2;
-        }
-    }
-
-    /*private int powerOfTwo(int n, int power){
-        if (n>0){
-            power=power*2;
-            n--;
-            powerOfTwo(n,power);
-        }
-        return power;
-    }*/
-
-    // TODO: Rename method, update argument and hook method into UI event
-    public void onButtonPressed(Uri uri) {
-        if (mListener != null) {
-            mListener.onFragmentInteraction(uri);
         }
     }
 
@@ -160,7 +129,12 @@ public class InitialFragment extends Fragment implements View.OnClickListener {
         ((MainActivity)getActivity()).callPartecipantsTransaction(Integer.valueOf(nPartValues[numPartPicker.getValue()-1]));
     }
 
-    /*private boolean verifyNum() {
+    /*
+    /**
+     * Verify if a num i power of two
+     * @return true if numis power of two, false otherwise
+     */
+   /* private boolean verifyNum() {
         double input = Integer.valueOf(numPartText.getText().toString());
 
         while (((input != 2) && input % 2 == 0) || input == 1) {
@@ -169,8 +143,8 @@ public class InitialFragment extends Fragment implements View.OnClickListener {
 
         return input == 2;
 
-    }
-*/
+    }*/
+
     /**
      * This interface must be implemented by activities that contain this
      * fragment to allow an interaction in this fragment to be communicated
