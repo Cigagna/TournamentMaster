@@ -49,7 +49,6 @@ public class PartecipantsFragment extends Fragment implements View.OnClickListen
     private EditText partName;
     private FloatingActionButton confirmPartButton;
     private TableLayout partTable;
-    private ArrayList<ArrayList> completeList;
 
     public PartecipantsFragment() {
         // Required empty public constructor
@@ -85,7 +84,7 @@ public class PartecipantsFragment extends Fragment implements View.OnClickListen
 
         initPartTable(view);
 
-        completeList=new ArrayList<ArrayList>();
+        MainActivity.completeList=new ArrayList<ArrayList>();
         confirmPartButton = (FloatingActionButton) view.findViewById(R.id.confirm_partecipants_floatingActionButton);
         confirmPartButton.setOnClickListener(this);
         // Inflate the layout for this fragment
@@ -152,8 +151,8 @@ public class PartecipantsFragment extends Fragment implements View.OnClickListen
             }
         }
 
-        completeList.add(nameList);
-        ((MainActivity)getActivity()).callSchemeTransaction(completeList);
+        MainActivity.completeList.add(nameList);
+        ((MainActivity)getActivity()).callSchemeTransaction(MainActivity.completeList);
 
 
     }

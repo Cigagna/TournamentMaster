@@ -5,5 +5,5 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <string name="info_title">About</string>
-    <string name="message_title">Hello blank fragment</string>
+    <string name="save_state_key">Hello blank fragment</string>
 </resources>
