@@ -2,9 +2,25 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/appbar_menu">
 
-    <!-- Settings, should always be in the overflow -->
+
+    <item android:id="@+id/save_state_action"
+        android:title="Save"
+        android:icon="@android:drawable/ic_menu_save"
+        app:showAsAction="always"/>
+
+    <item android:id="@+id/load_state_action"
+        android:title="Load"
+        android:icon="@android:drawable/ic_menu_set_as"
+        app:showAsAction="always"/>
+
+    <item android:id="@+id/delete_tournament_action"
+        android:title="Delete"
+        android:icon="@android:drawable/ic_menu_delete"
+        app:showAsAction="ifRoom"/>
+
     <item android:id="@+id/action_about"
         android:title="About"
+        android:icon="@android:drawable/ic_menu_info_details"
         app:showAsAction="ifRoom"/>
 
 </menu>
